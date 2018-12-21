@@ -4,11 +4,13 @@ import {RouterModule,Routes} from '@angular/router'
 
 import{LoginComponent} from './logincomponent/logincomponent.component'
 import { HomeComponent }   from './home/home.component';
+import {HospitalComponent}  from './hospital/hospital.component';
+import {DepartmentComponent} from './department/department.component'
 const routes: Routes = [
- { path: '',  component: HomeComponent},
- //{ path: 'home', component: HomeComponent },
+ { path: '', redirectTo: "/hospital" ,pathMatch:'full'},
+ { path: 'hospital', component: HospitalComponent },
   { path: 'login', component: LoginComponent },
- // { path: 'detail/:id', component: HeroDetailComponent },
+  { path: 'department/:name', component: DepartmentComponent },
 //  { path: 'heroes', component: HeroesComponent }
 {  path: 'admin',
 loadChildren: './admin/admin.module#AdminModule' }

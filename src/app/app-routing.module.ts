@@ -6,6 +6,7 @@ import{LoginComponent} from './logincomponent/logincomponent.component'
 import { HomeComponent }   from './home/home.component';
 import {HospitalComponent}  from './hospital/hospital.component';
 import {DepartmentComponent} from './department/department.component'
+import { RegistrationComponent } from './registration/registration.component';
 const routes: Routes = [
  { path: '', redirectTo: "/hospital" ,pathMatch:'full'},
  { path: 'hospital', component: HospitalComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'department/:name', component: DepartmentComponent },
 //  { path: 'heroes', component: HeroesComponent }
 {  path: 'admin',
-loadChildren: './admin/admin.module#AdminModule' }
+loadChildren: './admin/admin.module#AdminModule' },
+{ path:'registartion',component:RegistrationComponent}
 ];
 @NgModule({
   imports: [
